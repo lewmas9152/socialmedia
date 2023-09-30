@@ -12,7 +12,6 @@ const Content = () => {
       </header>
       <div className="card">
       <div className="subscribers">
-
       <div className="facebook">
           <a href="#" className="link">
             <img src="./icon-facebook.svg" alt="facebook_icon" />
