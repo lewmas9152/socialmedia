@@ -21,7 +21,8 @@
   --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
   --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
   --Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
-  --Desaturated-Blue-Text: hsl(228, 34%, 66%);
+  --Desaturated-Blue-Text: hsla(228, 34%, 66%,1);
+  
   --White-Text: hsl(0, 0%, 100%);
   /* Light Theme */
   --Toggle-light: hsla(230, 22%, 74%, 0.2);
@@ -45,6 +46,10 @@ body {
 
 h1 {
   margin-bottom: 0.2rem; color: var(--Very-Dark-Blue-Text);
+}
+
+h2 {
+  margin-top: 1rem;
 }
 
 p {
@@ -88,12 +93,20 @@ input[type="range"]{
 
 
 .container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  column-gap: 1rem;
   justify-content: center;
+  min-width: 100vw;
  
   
 
+}
+
+.subscribers {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 90vw;
 }
 
 .card {
@@ -101,7 +114,7 @@ input[type="range"]{
   flex-direction: column;
   background-color: var(--Very-Pale-Blue-Top-BG-Pattern);
   gap: 1rem;
-  width: 90vw;
+  min-width: 90vw;
  
   
 }
@@ -194,6 +207,8 @@ input[type="range"]{
 }
 
 
+
+
 .reactions .link {
   display: flex;
   text-decoration:dashed;
@@ -216,18 +231,72 @@ input[type="range"]{
   justify-content: end;
 }
 
-/* .numbers {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  align-self: center;
-  background-color: red;
-  width: 17rem;
-} */
+/* dark-theme */
+body {
+  background-color: var(--Very-Dark-Blue-BG);
+  color: var(--Desaturated-Blue-Text);
+}
 
-/* .numbers .today {
-  align-self: center;
+h1,h2 {
+  color: var(--White-Text);
+}
+
+p {
+  color: var(--Desaturated-Blue-Text);
+}
+
+.card {
+  background-color: var(--Dark-Desaturated-Blue-Card-BG);
+}
+
+.link {
+    font-weight: 700;
+    
+}
+
+.num {
+  color: var(--White-Text);
+}
+
+.reactions .num {
+  color: var(--White-Text);
+
+}
+
+.reactions p {
+  color: var(--Desaturated-Blue-Text);
+}
+
+ .reactions .today {
+  display: flex;
   align-items: center;
-  justify-content: end;
-  justify-self: flex-end;
-} */
+  margin-top: 1.5rem ;
+  color: var(--Lime-Green);
+  font-weight: 700;
+}
+
+ .today .youtubeDown {
+  color: var(--Bright-Red);
+}
+
+
+@media screen and (min-width:650px) {
+
+  .card {
+    min-width: none;
+  }
+
+  .subscribers {
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+    column-gap: 1rem;
+  }
+
+
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1rem;
+
+  }
+}

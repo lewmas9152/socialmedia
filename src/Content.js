@@ -11,7 +11,9 @@ const Content = () => {
         </div>
       </header>
       <div className="card">
-        <div className="facebook">
+      <div className="subscribers">
+
+      <div className="facebook">
           <a href="#" className="link">
             <img src="./icon-facebook.svg" alt="facebook_icon" />
             <p>@nathanf</p>
@@ -65,9 +67,12 @@ const Content = () => {
             144 Today
           </p>
         </div>
+        </div> 
 
+     
+        <h2>Overview - Today</h2>
         <div className="overview">
-          <h2>Overview - Today</h2>
+         
           <div className="reactions">
             <p class="link">
               Page Views <img src="./icon-facebook.svg" alt="facebook_icon" />
@@ -135,7 +140,7 @@ const Content = () => {
             </p>
             <p className="num">107</p>
             <p className="today">
-              <img src="./icon-down.svg" alt="down-icon" />
+              <img src="./icon-down.svg" alt="down-icon" className="youtubeDown" />
               19%
             </p>
           </div>
@@ -145,7 +150,7 @@ const Content = () => {
             </p>
             <p className="num">1407</p>
             <p className="today">
-              <img src="./icon-down.svg" alt="down-icon" />
+              <img src="./icon-down.svg" alt="down-icon" className="youtubeDown" />
               12%
             </p>
           </div>
