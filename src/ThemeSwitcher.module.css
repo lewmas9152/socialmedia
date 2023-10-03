@@ -1,0 +1,49 @@
+  
+    
+body {
+    background-color: var(--Very-Dark-Blue-BG);
+    color: var(--Desaturated-Blue-Text);
+  }
+  
+  h1,h2 {
+    color: var(--White-Text);
+  }
+  
+  p {
+    color: var(--Desaturated-Blue-Text);
+  }
+  
+  .card {
+    color: blue;
+    background-color: var(--Dark-Desaturated-Blue-Card-BG);
+  }
+  
+  .link {
+      font-weight: 700;
+      
+  }
+  
+  .num {
+    color: var(--White-Text);
+  }
+  
+  .reactions .num {
+    color: var(--White-Text);
+  
+  }
+  
+  .reactions p {
+    color: var(--Desaturated-Blue-Text);
+  }
+  
+   .reactions .today {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem ;
+    color: var(--Lime-Green);
+    font-weight: 700;
+  }
+  
+   .today .youtubeDown {
+    color: var(--Bright-Red);
+  }

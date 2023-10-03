@@ -1,3 +1,7 @@
+import ThemeSwitcher from "./ThemeSwitcher";
+
+
+
 const Content = () => {
   return (
     <main className="container">
@@ -6,8 +10,8 @@ const Content = () => {
         <p> Total Followers: 23,004</p>
         <hr />
         <div className="dark">
-          <label for="darkMode">Dark Mode</label>
-          <input type="range" id="darkMode" />
+          <label htmlFor="darkMode">Dark Mode</label>
+          <ThemeSwitcher />
         </div>
       </header>
       <div className="card">
