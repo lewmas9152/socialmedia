@@ -4,9 +4,12 @@ import Content from './Content';
 
 function App() {
 
+
+  const theme= localStorage.getItem("theme")
+console.log(theme)
   
   return (
-    <div className="App">
+    <div className="App" data-theme={theme}>
        
      <Content /> 
      

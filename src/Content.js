@@ -1,10 +1,10 @@
 import ThemeSwitcher from "./ThemeSwitcher";
 
-
-
 const Content = () => {
+
+
   return (
-    <main className="container">
+    <main className="container " >
       <header>
         <h1>Social Media Dashboard</h1>
         <p> Total Followers: 23,004</p>

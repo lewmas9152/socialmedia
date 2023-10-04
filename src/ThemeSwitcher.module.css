@@ -14,8 +14,7 @@ body {
   }
   
   .card {
-    color: blue;
-    background-color: var(--Dark-Desaturated-Blue-Card-BG);
+    background-color: var(--Background-card);
   }
   
   .link {

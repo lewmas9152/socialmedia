@@ -1,14 +1,18 @@
 import Content from './Content'
-import styles from './ThemeSwitcher.module.css';
 import { useState } from 'react';
+
 
 const ThemeSwitcher = () => {
   const [clicked, setClicked] = useState(false);
 
   const handleThemeSwitcher = () => {
-    console.log("Button clicked");
+const currentTheme=localStorage.getItem("theme")
+currentTheme==="light"?localStorage.setItem("theme","dark"):localStorage.setItem("theme","light")
+
+window.location.reload()
 
   }
+  
   return (
     <div >
       <input type="range" onClick={handleThemeSwitcher} />

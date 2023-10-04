@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 *,
 *::before,
 ::after {
@@ -7,45 +7,63 @@
   padding: 0;
 }
 
+
 :root {
   /* primary */
   --Lime-Green: hsl(163, 72%, 41%);
   --Bright-Red: hsl(356, 69%, 56%);
   --Facebook: hsl(208, 92%, 53%);
   --Twitter: hsl(203, 89%, 53%);
-  --Instagram:  hsl(37, 97%, 70%); 
+  --Instagram: hsl(37, 97%, 70%);
   --Instagram2: hsl(329, 70%, 58%);
   --YouTube: hsl(348, 97%, 39%);
-  /* //dark theme */
   --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
-  --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
-  --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
-  --Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
-  --Desaturated-Blue-Text: hsla(228, 34%, 66%,1);
-  
-  --White-Text: hsl(0, 0%, 100%);
-  /* Light Theme */
   --Toggle-light: hsla(230, 22%, 74%, 0.2);
-  --White-BG: hsl(0, 0%, 100%);
-  --Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
-  --Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
-  --Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
-  --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+    
+
+
+
+    --White-BG: hsl(0, 0%, 100%);
+    --Background-card: hsl(225, 100%, 98%);
+    --Background-body: hsl(227, 47%, 96%);
+    --Paragraph-color: hsl(228, 12%, 44%);
+    --Heading: hsl(230, 17%, 14%);
 }
+
+
+[data-theme = "dark"] {
+
+  --Background-body: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+    --Background-card: hsl(228, 28%, 20%);
+    --Paragraph-color: hsla(228, 34%, 66%, 1);
+    --Heading: hsl(0, 0%, 100%);
+
+}
+.App{
+  background-color: var(--Background-body);
+  min-height: 100vh;
+}
+#root{
+  min-height:100vh ;
+}
+
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--Light-Grayish-Blue-Card-BG);
-  margin: 1rem;
-  font-family: 'Inter', sans-serif;
+  background-color: var(--Background-body);
+
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: var(--Very-Dark-Blue-Text);
-
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 h1 {
-  margin-bottom: 0.2rem; color: var(--Very-Dark-Blue-Text);
+  margin-bottom: 0.2rem;
+  color: var(--Heading);
 }
 
 h2 {
@@ -53,17 +71,13 @@ h2 {
 }
 
 p {
-  color: var(--Dark-Grayish-Blue-Text);
+  color: var(--Paragraph-color);
 }
 
 header {
   text-align: start;
   font-weight: 700;
-  
-  
 }
-
-
 
 hr {
   border: 0;
@@ -81,16 +95,14 @@ hr {
   margin-top: 1rem;
 }
 
-input[type="range"]{
+input[type="range"] {
   -webkit-appearance: none;
   margin-right: 15px;
   width: 2rem;
   height: 1rem;
   background: grey;
-  border-radius:50px;
-  
+  border-radius: 50px;
 }
-
 
 .container {
   display: grid;
@@ -98,8 +110,6 @@ input[type="range"]{
   justify-content: center;
   min-width: 100vw;
  
-  
-
 }
 
 .subscribers {
@@ -112,11 +122,9 @@ input[type="range"]{
 .card {
   display: flex;
   flex-direction: column;
-  background-color: var(--Very-Pale-Blue-Top-BG-Pattern);
+  background-color: var(--Background-card);
   gap: 1rem;
   min-width: 90vw;
- 
-  
 }
 
 .link {
@@ -128,16 +136,14 @@ input[type="range"]{
   color: var(--Very-Dark-Blue-Text);
 }
 
-
-
-.facebook  {
+.facebook {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-top: solid 3px var(--Facebook);
   border-radius: 5px;
-  background-color:  var(--Toggle-light);
+  background-color: var(--Toggle-light);
   padding: 1rem;
 }
 
@@ -148,7 +154,7 @@ input[type="range"]{
   align-items: center;
   border-top: solid 3px var(--Twitter);
   border-radius: 5px;
-  background-color:  var(--Toggle-light);
+  background-color: var(--Toggle-light);
   padding: 1rem;
 }
 
@@ -159,7 +165,7 @@ input[type="range"]{
   align-items: center;
   border-top: solid 3px var(--Instagram);
   border-radius: 5px;
-  background-color:  var(--Toggle-light);
+  background-color: var(--Toggle-light);
   padding: 1rem;
 }
 
@@ -170,7 +176,7 @@ input[type="range"]{
   align-items: center;
   border-top: solid 3px var(--YouTube);
   border-radius: 5px;
-  background-color:  var(--Toggle-light);
+  background-color: var(--Toggle-light);
   padding: 1rem;
 }
 .num {
@@ -188,7 +194,7 @@ input[type="range"]{
 .today {
   display: flex;
   align-items: center;
-  margin-top: 1.5rem ;
+  margin-top: 1.5rem;
   color: var(--Lime-Green);
   font-weight: 700;
 }
@@ -201,19 +207,15 @@ input[type="range"]{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 1rem;
-  background-color: var(--Toggle-light) ;
+  background-color: var(--Toggle-light);
   padding: 1rem 1.5rem;
   border-radius: 5px;
 }
 
-
-
-
 .reactions .link {
   display: flex;
-  text-decoration:dashed;
+  text-decoration: dashed;
   justify-content: space-between;
- 
 }
 
 .reactions :first-child {
@@ -233,25 +235,20 @@ input[type="range"]{
 
 /* dark-theme */
 
-
-
-@media screen and (min-width:650px) {
-
+@media screen and (min-width: 650px) {
   .card {
     min-width: none;
   }
 
   .subscribers {
     display: grid;
-    grid-template-columns:repeat(4,1fr) ;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 1rem;
   }
 
-
   .overview {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 1rem;
-
   }
 }
